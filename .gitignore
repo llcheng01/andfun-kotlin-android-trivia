@@ -1,5 +1,6 @@
 *.iml
 .gradle
+.idea/navEditor.xml
 /local.properties
 /.idea/caches
 /.idea/codeStyles
