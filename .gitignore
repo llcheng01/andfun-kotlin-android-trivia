@@ -1,3 +1,6 @@
+.idea/navEditor.xml
+.idea/*
+
 *.iml
 .gradle
 /local.properties
