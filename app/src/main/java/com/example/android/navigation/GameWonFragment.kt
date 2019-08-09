@@ -45,10 +45,15 @@ class GameWonFragment : Fragment() {
         binding.nextMatchButton.setOnClickListener { view: View ->
             // TODO (10) Replace action ID with actionGameWonFragmentToGameFragment
             // From GameWonFragmentDirections
-            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+            view.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
         // TODO (08) Add and show toast to get the GameWonFragmentArgs from the arguments Bundle
         // "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}"
+        // Arguements would be available here
+        val args = GameWonFragmentArgs.fromBundle(arguments!!)
+        Toast.makeText(context, "Number Correct: ${args.numCorrect}, " +
+                "NumQuestions: ${args.numQuestions}",
+                Toast.LENGTH_LONG).show()
         return binding.root
     }
 }
